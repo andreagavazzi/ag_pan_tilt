@@ -4,8 +4,8 @@
 
 <!--node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" /-->
 
-<!-- robot_state_publisher pubblica il joint_state sul tf per visualizzrlo in rviz -->
+<!-- robot_state_publisher pubblica il jpoint_state sul tf per visualizzarlo in rviz -->
 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-<node name="rviz" pkg="rviz" type="rviz" args="-d $(find ag_pan_tilt)/urdf/turret.rviz" required="true" />
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find ag_pan_tilt)/config/head.rviz" required="true" />
 
 </launch>
