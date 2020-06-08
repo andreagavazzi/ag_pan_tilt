@@ -1,14 +1,14 @@
 <launch>
   
   <!-- remap topics to conform to specifications -->
-  <remap from="/reachy/joint_trajectory" to="/joint_trajectory" />
-  <remap from="/reachy/joint_states" to="/joint_states" />
-  <remap from="/reachy/dynamixel_state" to="/dynamixel_state"/>
+  <remap from="/dynamixel/joint_trajectory" to="/joint_trajectory" />
+  <remap from="/dynamixel/joint_states" to="/joint_states" />
+  <remap from="/dynamixel/dynamixel_state" to="/dynamixel_state"/>
 
   <!-- parameters -->
   <arg name="usb_port"                default="/dev/ttyUSB0"/>
   <arg name="dxl_baud_rate"           default="1000000"/>
-  <arg name="namespace"               default="reachy"/>
+  <arg name="namespace"               default="dynamixel"/>
   <arg name="use_moveit"              default="true"/>
   <arg name="use_joint_state"         default="true"/>
   <arg name="use_cmd_vel"             default="false"/>
