@@ -26,6 +26,20 @@
 
 
 
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+string[] joint_names
+trajectory_msgs/JointTrajectoryPoint[] points
+  float64[] positions
+  float64[] velocities
+  float64[] accelerations
+  duration time_from_start
+
+
+
+
 import time
 import rospy
 from sensor_msgs.msg import JointState
