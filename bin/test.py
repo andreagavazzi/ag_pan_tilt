@@ -14,15 +14,19 @@ head_pub = rospy.Publisher('joint_trajectory', JointTrajectory, queue_size=1)
 # funzione callback
 def callback(data):
 
-    joints = JointTrajectory()
     jp = JointTrajectoryPoint()
-    jp.positions.append(0)
+    jp.positions = [0, 0] # in ordine definito dal names
+    jp.velocities = []
+    jp.accelerations = []
+    jp.effort = []
 
+    print jp
+
+    joints = JointTrajectory()
     joints.header.stamp = rospy.Time.now()
     joints.header.frame_id = '/base_link'
-    joints.joint_names = ['pan']
+    joints.joint_names = ['pan', 'tilt']
     joints.points.append(jp)
-
 
     head_pub.publish(joints)
     
